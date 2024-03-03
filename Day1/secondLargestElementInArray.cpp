@@ -64,7 +64,7 @@ void secondLargestElementInArray2(int arr[], int n)
     cout << "Second Largest Number is : " << secondLargest << endl;
 }
 
-// optimal approach
+// optimal aproach
 void secondLargestElementInArray3(int arr[], int n)
 {
     int largest = arr[0];
