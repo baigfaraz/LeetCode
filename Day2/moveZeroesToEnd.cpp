@@ -3,32 +3,58 @@ using namespace std;
 
 void moveZeroesToEnd(int arr[], int arrSize)
 {
-    int sizeOfNonZero = 0;
-    for (int i = 0; i < arrSize; i++)
-    {
-        if (arr[i] != 0)
-            sizeOfNonZero = sizeOfNonZero + 1;
-    }
-    int temp[sizeOfNonZero];
-    int j = 0;
-    for (int i = 0; i < arrSize; i++)
-    {
-        if (arr[i] != 0)
-        {
-            temp[j] = arr[i];
-            j++;
-        }
-    }
+    // int sizeOfNonZero = 0;
+    // for (int i = 0; i < arrSize; i++)
+    // {
+    //     if (arr[i] != 0)
+    //         sizeOfNonZero = sizeOfNonZero + 1;
+    // }
+    // int temp[sizeOfNonZero];
+    // int j = 0;
+    // for (int i = 0; i < arrSize; i++)
+    // {
+    //     if (arr[i] != 0)
+    //     {
+    //         temp[j] = arr[i];
+    //         j++;
+    //     }
+    // }
 
+    // for (int i = 0; i < arrSize; i++)
+    // {
+    //     if (i < sizeOfNonZero)
+    //     {
+    //         arr[i] = temp[i];
+    //     }
+    //     else
+    //     {
+    //         arr[i] = 0;
+    //     }
+    // }
+
+    // for (int i = 0; i < arrSize; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    int j = -1;
     for (int i = 0; i < arrSize; i++)
     {
-        if (i < sizeOfNonZero)
+        if (arr[i] == 0)
         {
-            arr[i] = temp[i];
+            j = i;
+            break;
         }
-        else
+    }
+    if (j != -1)
+    {
+        for (int i = j + 1; i < arrSize; i++)
         {
-            arr[i] = 0;
+            if (arr[i] != 0)
+            {
+                arr[j] = arr[i];
+                arr[i] = 0;
+                j++;
+            }
         }
     }
 
