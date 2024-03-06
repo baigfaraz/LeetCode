@@ -2,13 +2,8 @@
 #include <vector>
 using namespace std;
 
-void findMissingNumber()
+void findMissingNumber(vector<int> arr)
 {
-}
-
-int main()
-{
-    vector<int> arr = {3, 0, 2, 5, 6, 1 , 4, 8};
     int arrSize = arr.size();
 
     for (int i = 0; i <= arrSize; i++)
@@ -25,6 +20,12 @@ int main()
             }
         }
     }
+}
+
+int main()
+{
+    vector<int> arr = {3, 0, 2, 5, 6, 1, 4, 8};
+    findMissingNumber(arr);
 
     return 0;
 }
