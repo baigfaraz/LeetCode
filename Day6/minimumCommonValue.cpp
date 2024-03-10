@@ -51,7 +51,7 @@ int minimumCommonValue(vector<int> arr1, vector<int> arr2)
 int main()
 {
     vector<int> arr1 = {1, 2, 3, 6};
-    vector<int> arr2 = {2, 3, 4, 5};
+    vector<int> arr2 = {1, 3, 4, 5};
 
     int result = minimumCommonValue(arr1, arr2);
     cout << "Minimum Common Value in both arrays is : " << result;
