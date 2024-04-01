@@ -10,6 +10,7 @@ string customSortString(string order, string s)
     };
     sort(s.begin(), s.end(), customComparator);
     return s;
+    
 }
 
 int main()
