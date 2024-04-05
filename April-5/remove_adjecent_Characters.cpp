@@ -35,10 +35,38 @@ string makeGood(string s)
     return res;
 }
 
+string makeGood1(string s)
+{
+    int index = 0;
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (isLower(s[i]) && isUpper(s[i + 1]) && tolower(s[i]) == tolower(s[i + 1]))
+        {
+            i = i + 1;
+        }
+        else if (isLower(s[i]) && isUpper(s[i + 1]) && tolower(s[i]) == tolower(s[i + 1]))
+        {
+            i = i + 1;
+        }
+        else
+        {
+            s[index] = s[i];
+            index++;
+        }
+    }
+
+    for (int i = 0; i < index; i++)
+    {
+        cout << s[i];
+    }
+
+    return s;
+}
+
 int main()
 {
     string s = "mC";
-    makeGood(s);
+    makeGood1(s);
 
     return 0;
 }
