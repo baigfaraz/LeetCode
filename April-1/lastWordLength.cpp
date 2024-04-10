@@ -21,6 +21,6 @@ int lastWordLength(string s)
 
 int main()
 {
-    cout << lastWordLength("luffy is still joyboy");
+    cout << lastWordLength("hammad adrees     ");
     return 0;
 }
