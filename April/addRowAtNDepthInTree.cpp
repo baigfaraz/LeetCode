@@ -28,6 +28,7 @@ TreeNode *helper(TreeNode *root, int val, int depth, int currdepth)
     if (currdepth == depth - 1)
     {
         TreeNode *leftman = root->left;
+        // TreeNode *rightman = root->right;
         TreeNode *rightman = root->right;
 
         root->left = new TreeNode(val);
